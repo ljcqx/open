@@ -1,46 +1,49 @@
 <script src="js/jquery.min.js"></script>
+<script src="js/my.input.select.js"></script>
+
 <script>
-$(function(){ 
-	 $('.click').click(function(){
-		if($('.muit').css('display')=='block'){
-			$('.muit').hide();
-		}else{
-			$('.muit').show();
-		} 
-	 });
-	 $('.muit div').click(function(){ 
-		$('#data').val($(this).html());
-		$('.muit').hide();
-	 });
+$(function(){
+	 $('#data').input_select({list:'muit',click:'click'}); 
+
 });
 
 </script>
 <style>
 .muit{
-z-index:1000;
-width:260px;
-height:120px; 
-overflow:scroll; 
-border:1px solid;
-display:none;
-position:relative;
+	z-index:1000;
+	width:260px;
+	height:120px; 
+	overflow:scroll; 
+	border:1px solid;
+	display:none;
+	position:relative;
 }
 .muit div:hover{
-background:#ccc;
+	background:#ccc;
 }
-
+#nbox{
+	position: absolute; //very importent
+	clear: both;
+	width: 500px;  
+	top: 26px;
+}
 </style>
 
-<input id='data' >
+<div id='nbox'>
+	<input id='data' >
 
-<div class='muit' >
-	<div>abc</div>
-	<div>45</div>
-	<div>abc</div>
-	<div>45</div>
-	<div>abc</div>
-	<div>45</div>
-	<div>abc</div>
-	<div>45</div>
+	<div class='muit' >
+		<div>abc</div>
+		<div>45</div>
+		<div>abc</div>
+		<div>45</div>
+		<div>abc</div>
+		<div>45</div>
+		<div>abc</div>
+		<div>45</div>
+	</div>
+	<span class='click'>up</span>
 </div>
-<span class='click'>up</span>
+
+ 
+
