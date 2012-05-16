@@ -1,0 +1,46 @@
+<script src="js/jquery.min.js"></script>
+<script>
+$(function(){ 
+	 $('.click').click(function(){
+		if($('.muit').css('display')=='block'){
+			$('.muit').hide();
+		}else{
+			$('.muit').show();
+		} 
+	 });
+	 $('.muit div').click(function(){ 
+		$('#data').val($(this).html());
+		$('.muit').hide();
+	 });
+});
+
+</script>
+<style>
+.muit{
+z-index:1000;
+width:260px;
+height:120px; 
+overflow:scroll; 
+border:1px solid;
+display:none;
+position:relative;
+}
+.muit div:hover{
+background:#ccc;
+}
+
+</style>
+
+<input id='data' >
+
+<div class='muit' >
+	<div>abc</div>
+	<div>45</div>
+	<div>abc</div>
+	<div>45</div>
+	<div>abc</div>
+	<div>45</div>
+	<div>abc</div>
+	<div>45</div>
+</div>
+<span class='click'>up</span>
