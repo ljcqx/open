@@ -28,8 +28,12 @@ $(function(){
 			$(b).click(function(){   
 				if($(a).css('display')=='block'){
 					$(a).hide();
+					$(b).removeClass('up');
+					$(b).addClass('down');
 				}else{
 					$(a).show();
+					$(b).removeClass('down');
+					$(b).addClass('up');
 				} 
 			});
 			$(c).click(function(){ 
@@ -42,6 +46,8 @@ $(function(){
 					var v1 = a+','+b+','+c+',';
 					if (!t.is(v1)) {
 						$(a).hide(); 
+						$(b).removeClass('up');
+						$(b).addClass('down');
 					}
 			});
 
