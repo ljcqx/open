@@ -39,6 +39,8 @@ $(function(){
 			$(c).click(function(){ 
 				$(obj).val($(this).html());
 				$(a).hide();
+				$(b).removeClass('up');
+				$(b).addClass('down');
 			 });
 
 			 $(document).click(function(e) {
