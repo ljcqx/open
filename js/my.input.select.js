@@ -14,18 +14,20 @@ $(function(){
 (function($){
 
  	$.fn.extend({  
- 		input_select: function(options) { 
+ 		input_select: function(options) {  
 			var defaults = {
 				list:'muit',
 				click:'click',
 				inner:'div',
+				event: 'click'
 			};
 			var opts = $.extend(defaults,options); 
 			var a = '.'+opts.list; 
 			var b = '.'+opts.click;
-			var c = '.'+opts.list+" "+opts.inner;    
-			var obj = this;
-			$(b).click(function(){   
+			var c = '.'+opts.list+" "+opts.inner;   
+			var e = opts.event;
+			var obj = this; 
+			$(b).bind(e,function(){   
 				if($(a).css('display')=='block'){
 					$(a).hide();
 					$(b).removeClass('up');
@@ -36,7 +38,7 @@ $(function(){
 					$(b).addClass('up');
 				} 
 			});
-			$(c).click(function(){ 
+			$(c).bind('click',function(){ 
 				$(obj).val($(this).html());
 				$(a).hide();
 				$(b).removeClass('up');
