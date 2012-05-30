@@ -1,0 +1,49 @@
+<script src="js/jquery.min.js"></script>
+<script src="js/my.input.select.js"></script>
+
+<script>
+$(function(){ 
+	 $('#data').input_select({list:'muit',click:'click'}); 
+
+});
+
+</script>
+<style>
+.muit{
+	z-index:1000;
+	width:260px;
+	height:120px; 
+	overflow:scroll; 
+	border:1px solid;
+	display:none;
+	position:relative;
+}
+.muit div:hover{
+	background:#ccc;
+}
+#nbox{
+	position: absolute; //very importent
+	clear: both;
+	width: 500px;  
+	top: 26px;
+}
+</style>
+
+<div id='nbox'>
+	<input id='data'  class='click'>
+
+	<div class='muit' >
+		<div>abc</div>
+		<div>45</div>
+		<div>abc</div>
+		<div>45</div>
+		<div>abc</div>
+		<div>45</div>
+		<div>abc</div>
+		<div>45</div>
+	</div>
+	<span>up</span>
+</div>
+
+ 
+
