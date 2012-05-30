@@ -16,10 +16,10 @@ $(function(){
  
 (function($){
 
- 	$.fn.extend({  
- 		tab: function(options) { 
+	$.fn.extend({  
+		tab: function(options) { 
 			var defaults = {
-				active:'selected',
+				active:'active',
 				event: 'click'
 			};
 			var opts = $.extend(defaults,options);  
@@ -31,10 +31,11 @@ $(function(){
 			$(this).find('li a').each(function(){ 
 				selected(i,this);
 				i++;
+				$(this).attr('href','javascript:void(0);').attr('onclick',"return false");
 			}).bind(e,function(){
-				 var h = $(this).attr('href'); 
+				 var h = "#"+$(this).attr('rel'); 
 				 $(obj).find('li a').each(function(){ 
-					var current = $(this).attr('href');
+					var current = "#"+$(this).attr('rel');  
 					if(h ==  current ){  
 						$(h).show();
 						$(this).addClass(at);
@@ -43,20 +44,20 @@ $(function(){
 						$(this).removeClass(at);
 					}
 				})
-				 
-			})
-			 function selected(i,obj){ 
-				var h = $(obj).attr('href'); 
+
+			});
+			function selected(i,obj){ 
+				var h = "#"+$(obj).attr('rel'); 
 				if(i==0){
 					$(obj).addClass(at);
 					$(h).show();
 				}else{
 					$(h).hide();
 				}
-				
+
 			}
-    	}
-		
+		}
+
 	});
-	
+
 })(jQuery); 
