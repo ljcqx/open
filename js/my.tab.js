@@ -31,13 +31,13 @@ $(function(){
 			var hidden = opts.hide;
 			var i = 0;
 			var j = 0;
-			$(this).find('li a').each(function(){ 
+			$(this).find('a').each(function(){ 
 				selected(i,this,hidden); 
 				i++;
 				$(this).attr('href','javascript:void(0);').attr('onclick',"return false");
 			}).bind(e,function(){
 				 var h = "#"+$(this).attr('rel'); 
-				 $(obj).find('li a').each(function(){ 
+				 $(obj).find('a').each(function(){ 
 					var current = "#"+$(this).attr('rel');  
 					if(h ==  current ){  
 						$(h).show();
