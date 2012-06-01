@@ -42,8 +42,7 @@ $(function(){
 
  	$.fn.extend({  
  		input: function(options) {  
-			var defaults = { 
-				tab:'.tab a', 
+			var defaults = {  
 				val:'.value span', 
 				event: 'click',
 				hide:'input'
@@ -66,7 +65,7 @@ $(function(){
 			});
 			 $(document).click(function(e) {
 					var t = $(e.target); 
-					var v1 = s+','+hide+','+tab+','+s+' div,'+s+'  span,'+s+ ' ul,'+s+ ' li'+s+' dd'+s+' dl';
+					var v1 = s+','+hide+','+','+s+' div,'+s+'  span,'+s+' a,'+s+ ' ul,'+s+ ' li'+s+' dd'+s+' dl';
 					if (!t.is(v1)) {
 						$(s).hide(); 
 					 
