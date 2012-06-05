@@ -1,0 +1,25 @@
+<script src="js/jquery.min.js"></script>
+ 
+<script type="text/javascript">
+$(function(){
+	
+	$('.animate').click(function(){ 
+		var i = $('#'+$(this).attr('rel')); 
+		if(i.css('display')=='block'){
+			i.hide();
+		}
+		else{
+			i.show();
+		}
+		$(".info").animate({opacity: 1.0}, 2000).fadeOut("slow");
+	});
+});
+ 
+</script>
+<div class='animate' rel='aa'>open</div>
+
+<div id='aa' class='info' style='display:none;'>content tab1</div>
+ 
+ 
+ 
+
