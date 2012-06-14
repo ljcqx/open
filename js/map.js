@@ -2,7 +2,8 @@ $(function(){
  	$('.map li').click(function(){
  		$('.map_hide').hide();
  		$('#'+$(this).attr('rel')).show();
- 		
+ 		$('.map li').removeClass('active');
+ 		$(this).addClass('active');
  	});
  	
  	$('.map_show').hover(function(){
