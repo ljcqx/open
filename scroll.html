@@ -1,0 +1,70 @@
+<script src="js/jquery.min.js"></script>
+<script src="js/scroll.js"></script>
+<script>
+$(function(){
+	scroll(".mallMiddleBottom",".mallLeftImg",".mallRightImg",".mallUl",1,true);
+	
+});
+</script>
+<style type="text/css"> 
+.mallMiddle{width:700px;float:left; display:inline;border:1px solid #000;}
+.mallMiddleTop{width:100%;float:left}
+.mallMiddleTop h3{width:400px;float:left;margin-top:5px;margin-left:5px;display:inline;font-size:16px;font-weight:bolder;color:#414141;cursor:pointer}
+.mallMiddleTop li{width:153px;height:59px;float:left;margin-top:5px;margin-left:5px;display:inline;border:1px #cdcdcd solid}
+.mallMiddleBottom{wdith:460px;float:left;margin-top:20px;margin-left:16px;display:inline;position:relative;}
+ul,li{padding:0;margin:0;}
+.mallLeftImg,.mallRightImg{ vertical-align: middle;width:12px;float:left;border:1px solid blue;cursor:pointer}
+ 
+.mallRightImg{float:right;}
+.mallUl{float:left;width:600px;height:220px;  overflow:hidden;}
+.mallUl ul{width:9999px}
+.mallUl ul li{width:200px; overflow:hidden;float:left;margin-top:-5px;margin-left:2px;display:inline;position:relative}
+.mallUl img{height:220px; width:200px;}
+.mallUl span{
+position: absolute;
+bottom: 10px;
+left: 95px;
+background:#eee;
+color:blue;
+}
+</style>
+
+<div class="mallMiddle">
+	<div class="mallMiddleBottom">
+		<div  class="mallLeftImg prev">
+			<img src="http://www.jqueryba.com/jquery/scroll/images/left.png">
+		</div>
+		<div class="mallUl">
+			<ul>
+				<li>
+					<a href="">
+						<img src="http://www.sc.xinhuanet.com/content/2009-04/10/xinsrc_403040610143481729847.jpg">
+					</a>
+					<span >贾静雯1</span>
+				</li>
+				<li>
+					<a href="">
+					<img src="http://upload.northnews.cn/2011/0805/1312509857406.jpg">
+					</a>
+					<span >贾静雯2</span>
+				</li>
+				<li>
+					<a href="">
+					<img src="http://hair.sg.com.cn/uploadfiles/2009/10/27/20091027D819A0F1FB5049B989EBFD86E7359EAD.jpg">
+					</a>
+					<span >贾静雯3</span>
+				</li>
+				<li>
+					<a href="">
+					<img src="http://ent.cctv.com/20090921/images/1253492085686_21532922.jpg">
+					</a>
+					<span >贾静雯4</span>
+				</li>
+ 
+			</ul>	
+		</div>
+		<div  class="mallRightImg next">
+			<img src="http://www.jqueryba.com/jquery/scroll/images/right.png" class="">
+		</div>
+	</div>	
+</div>
