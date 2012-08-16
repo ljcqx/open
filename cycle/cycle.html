@@ -1,0 +1,22 @@
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.cycle.all.js"></script>
+
+<script>
+$(function(){   
+	 
+	    $('#slideshow').cycle({ 
+		    fx:     'scrollHorz', 
+		    prev:   '#prev', 
+		    next:   '#next',  
+		    timeout: 1000
+		});
+
+}); 
+</script>
+ 
+<div class="nav"><a id="prev" href="#" style="display: inline; ">Prev</a> <a id="next" href="#" style="display: inline; ">Next</a></div>
+<div id="slideshow" class="pics"> 
+   <span>测试内容1</span>
+   <span>这也是个内容</span>
+   <span>最后一条记录了</span>
+</div> 
