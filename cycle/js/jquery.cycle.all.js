@@ -948,7 +948,7 @@ function clearTypeFix($slides) {
 		}
 		return '#ffffff';
 	}
-	$slides.each(function() { $(this).css('background-color', getBg(this)); });
+//	$slides.each(function() { $(this).css('background-color', getBg(this)); });
 }
 
 // reset common props before the next transition
